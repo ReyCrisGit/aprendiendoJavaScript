@@ -9,4 +9,4 @@ const multiplicarNumeros = (...numeros) => {
   });
   return producto;
 };
-console.log(multiplicarNumeros(2, 3, 4, 10, "a", 2, "s"));
+console.log(multiplicarNumeros("a", 2, "s", 2));
