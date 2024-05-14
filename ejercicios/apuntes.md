@@ -74,3 +74,33 @@ console.log(libro);
 En este código, `Producto.call(this, nombre, precio, cantidadStock)` se utiliza para llamar al constructor de `Producto` dentro del constructor de `Libro`, asegurando que las propiedades de `Producto` se inicialicen correctamente para instancias de `Libro`. Luego, se establece la herencia prototípica de `Libro` a `Producto.prototype` utilizando `Object.create`. Esto permite que `Libro` herede los métodos y propiedades de `Producto`.
 
 ¡Espero que esto te ayude a comprender mejor cómo implementar la herencia prototípica en JavaScript! Si tienes más preguntas o necesitas más ayuda, ¡no dudes en preguntar!
+# Encapsulamiento con closures
+¡Claro! El encapsulamiento con closures es un concepto fundamental en JavaScript que se refiere a la capacidad de una función interna para acceder y recordar el ámbito léxico en el que fue creada, incluso después de que la función externa haya terminado su ejecución. Esto permite crear un entorno privado dentro de una función donde las variables y funciones internas están protegidas de ser accedidas o modificadas desde fuera de la función.
+
+Vamos a explicar el concepto con un ejemplo:
+
+```javascript
+function crearContador() {
+  let contador = 0;
+
+  function incrementar() {
+    contador++;
+    console.log(contador);
+  }
+
+  return incrementar;
+}
+
+const contador1 = crearContador();
+contador1(); // Salida: 1
+contador1(); // Salida: 2
+
+const contador2 = crearContador();
+contador2(); // Salida: 1
+```
+
+En este ejemplo, la función `crearContador` encapsula una variable llamada `contador` dentro de su ámbito. La función interna `incrementar` tiene acceso a esta variable, pero no puede ser accedida desde fuera de la función `crearContador`. Cada vez que se llama a `crearContador`, se crea un nuevo entorno con su propia variable `contador`, manteniendo así el estado de cada contador independiente entre sí.
+
+El encapsulamiento con closures es útil para crear funciones que actúen como objetos con estado interno. Estas funciones pueden tener métodos que accedan y manipulen el estado interno de forma segura, sin exponer dicho estado a manipulaciones externas.
+
+Ahora que tienes una comprensión básica del encapsulamiento con closures, puedes aplicarlo en tu ejercicio para crear un objeto `Producto` con propiedades privadas y un método para calcular el total sin exponer directamente las propiedades. Si tienes alguna pregunta o necesitas más clarificaciones, ¡no dudes en preguntar!
