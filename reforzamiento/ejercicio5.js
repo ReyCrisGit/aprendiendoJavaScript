@@ -21,9 +21,10 @@ function Rectangulo(nombre, color, ancho, alto) {
 }
 
 Rectangulo.prototype = Object.create(Figura.prototype);
-Rectangulo.prototype.constructor = Figura;
+Rectangulo.prototype.constructor = Rectangulo;
 Rectangulo.prototype.calcularArea = function () {
   console.log(this.ancho * this.alto);
 };
-const rectangulo = new Rectangulo(2, 4);
+const rectangulo = new Rectangulo("Rectángulo", "rojo", 2, 4);
 console.log(rectangulo);
+rectangulo.calcularArea();
