@@ -33,7 +33,7 @@ const decimal = (valor) => {
   console.log(`${a} base 2`);
 };
 const convertir = (valor = undefined, unidad = undefined) => {
-  if (!valor) console.warn("Debe ingresar el valor");
+  if (valor === undefined) console.warn("Debe ingresar el valor");
   if (!unidad) console.warn("Debe ingresar la unidad");
   if (typeof valor === "number" && typeof unidad === "number") {
     if (unidad === 2) {
