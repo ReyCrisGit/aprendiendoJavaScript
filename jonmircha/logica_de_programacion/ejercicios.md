@@ -25,3 +25,18 @@
 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+27) Programa una clase llamada Pelicula.
+
+La clase recibirá un objeto al momento de instanaciarse con los siguientes datos: id de la pelicula en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificaciones en IMBD.
+- Todos los datos del objeto son obligatorios.
+- Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+- Valida que el título no rebase los 100 caracteres.
+- Validad que el director no rebase los 40 caracteres
+- Validad que el año de estreno sea un número entero de 4 dígitos.
+- Balidad que el país o países sea introducidos en forma de arreglo.
+- -validad que los géneros sean introducidos en forma de arreglo.
+- Balidad que los génreos introducidos esten dentro de los génreos aceptados*.
+- Crea un método estático que devuelva los géneros aceptados*.
+- Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+- Crea un método que devuelva toda la ficha técnica de la plícula.
+- A partir de una arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.
